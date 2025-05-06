@@ -1,0 +1,240 @@
+type: collection.insomnia.rest/5.0
+name: API
+meta:
+  id: wrk_0f8e73df1aa94cfd974c8e5572020515
+  created: 1746218529797
+  modified: 1746218529797
+collection:
+  - url: http://localhost:3000/api/auth/register
+    name: Registro de Usuário
+    meta:
+      id: req_fd7a59b791e84e1e84d4b1a07b262ea2
+      created: 1746218584049
+      modified: 1746395059345
+      isPrivate: false
+      sortKey: -1746218584049
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+           "customer_name": "Miguel",
+           "customer_email": "miguel@email.com",
+           "customer_password": "123456"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/auth/login
+    name: Login de Usuário
+    meta:
+      id: req_c491ac04be944d2196633a665a32dadb
+      created: 1746394753811
+      modified: 1746395235366
+      isPrivate: false
+      sortKey: -1746394753811
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+           "customer_email": "miguel@email.com",
+           "customer_password": "123456"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/repairs
+    name: Solicitação de Reparo
+    meta:
+      id: req_b39e052656c74da79f43fb9d7643f1f6
+      created: 1746394876745
+      modified: 1746473961898
+      isPrivate: false
+      sortKey: -1746394876745
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "request_date": "2011-01-10",
+          "description": "Meu celular danificado",
+          "repairer_id": "RP001"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_3e841b761f194e228f621b27d9cca22f
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_23a15be1587043d9a1e82d7fa6eab607
+      - id: pair_281e1173542d42e1ad4d4834bc341b56
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ2NDczNjczLCJleHAiOjE3NDY0NzcyNzN9.UEIVcCoj1Udqz4FruMmu2eQZWKKxBjf0OLjKpq33Zl0
+        disabled: false
+      - id: pair_e8452cbda88b43fa96e3cb3758f972d1
+        name: Content-Type
+        value: application/json
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/repairs
+    name: Listagem de Solicitações de Reparo
+    meta:
+      id: req_f1da2d7f2e694365b3649850c71491ca
+      created: 1746472541625
+      modified: 1746478129130
+      isPrivate: false
+      sortKey: -1746472541625
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_eb41acf0ce5843a5a1f0e3da4bb99ebc
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_9326bff333b940918f268e257b2eb593
+      - id: pair_a7d0ff50b59d40099833e15e6a89d03c
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ2NDc4MTE0LCJleHAiOjE3NDY0ODE3MTR9.uYO0_nr4HBfqxm94geaQ4nKmZ_00iN8gzMtwoCeV13k
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/repairs/3
+    name: Consulta de uma Solicitação de Reparo Específica
+    meta:
+      id: req_9e1eb7aa65684ecdaed12227003d8153
+      created: 1746472640719
+      modified: 1746478160953
+      isPrivate: false
+      sortKey: -1746472640719
+    method: PUT
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_1647fddb296848238e5070a94fe7cdbe
+      - id: pair_9032bd34ad074cfaa7a5b9cc919f982c
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ2NDc4MTE0LCJleHAiOjE3NDY0ODE3MTR9.uYO0_nr4HBfqxm94geaQ4nKmZ_00iN8gzMtwoCeV13k
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/repairs/2
+    name: Atualização de Solicitação de Reparo
+    meta:
+      id: req_f72166bb64d9417e820ee251cf1cbe86
+      created: 1746472762309
+      modified: 1746476130546
+      isPrivate: false
+      sortKey: -1746472762309
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "request_date": "2011-01-10",
+          "description": "Meu celular danificado",
+          "repairer_id": "RP001"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4d75fe81f0b84c819d1efc50c55a3c9a
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_57ca5a74e4f4494597c8a1b5015504c9
+      - id: pair_a7fda23940f3409a8e8fb6ae70384f6f
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ2NDczNjczLCJleHAiOjE3NDY0NzcyNzN9.UEIVcCoj1Udqz4FruMmu2eQZWKKxBjf0OLjKpq33Zl0
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/repairs/1
+    name: Deletar Solicitação
+    meta:
+      id: req_09bf71a95d73401ab28dcf7cd7432bf3
+      created: 1746472891559
+      modified: 1746473876207
+      isPrivate: false
+      sortKey: -1746472891559
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_2e4cb8ffb06144d2940142dbdbe7a1b7
+      - id: pair_1b9cf13507054258b92fe01892f75d62
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ2NDczNjczLCJleHAiOjE3NDY0NzcyNzN9.UEIVcCoj1Udqz4FruMmu2eQZWKKxBjf0OLjKpq33Zl0
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6274ed05eb7f25f5ef1699f8da6d71269fd632df
+    created: 1746218529850
+    modified: 1746218529850
+environments:
+  name: Base Environment
+  meta:
+    id: env_6274ed05eb7f25f5ef1699f8da6d71269fd632df
+    created: 1746218529811
+    modified: 1746218529811
+    isPrivate: false
